@@ -17,6 +17,8 @@
   "plugins": [
     "react-refresh",
     "@typescript-eslint",
+    "@typescript-eslint/eslint-plugin",
+    "import",
     "prettier"
   ],
   "settings": {
@@ -37,6 +39,9 @@
     "no-param-reassign": "off",
     "global-require": "off",
     "class-methods-use-this": "off",
+    "no-useless-constructor": "off",
+    "no-empty-function": "off",
+    "max-classes-per-file": "off",
     "import/no-extraneous-dependencies": "off",
     "import/extensions": [
       "error",

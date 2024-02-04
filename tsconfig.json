@@ -1,16 +1,15 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
+    "target": "ES2022",
     "useDefineForClassFields": true,
     "lib": [
-      "ES2020",
+      "ES2022",
       "DOM",
       "DOM.Iterable"
     ],
     "module": "ESNext",
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
@@ -18,7 +17,6 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "allowSyntheticDefaultImports": true,
-    /* Linting */
     "strict": true,
     "alwaysStrict": true,
     "strictNullChecks": true,
@@ -29,7 +27,6 @@
     "strictPropertyInitialization": false,
     "noImplicitAny": true,
     "strictBindCallApply": false,
-    /* Paths */
     "baseUrl": "./",
     "paths": {
       "@Data/*": [
