@@ -4,13 +4,27 @@ import { HttpPostClientSpy } from '@Data/test/mock-http-client';
 
 import { RemoteAuthentication } from './remote-authentication';
 
+type SystemUnderTestTypes = {
+  systemUnderTest: RemoteAuthentication;
+  httpPostClientSpy: HttpPostClientSpy;
+};
+
+const makeSystemUnderTest = (url: string = 'any_url'): SystemUnderTestTypes => {
+  const httpPostClientSpy = new HttpPostClientSpy();
+
+  const systemUnderTest = new RemoteAuthentication(url, httpPostClientSpy);
+
+  return {
+    systemUnderTest,
+    httpPostClientSpy,
+  };
+};
+
 describe('Remote Authentication', () => {
   it('should call HttpPostClient with correct URL', async () => {
-    const url = 'any_url';
+    const url = 'other_url';
 
-    const httpPostClientSpy = new HttpPostClientSpy();
-
-    const systemUnderTest = new RemoteAuthentication(url, httpPostClientSpy);
+    const { systemUnderTest, httpPostClientSpy } = makeSystemUnderTest(url);
 
     await systemUnderTest.auth();
 
