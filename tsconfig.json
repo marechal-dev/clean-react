@@ -17,14 +17,40 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
+    "allowSyntheticDefaultImports": true,
     /* Linting */
     "strict": true,
     "alwaysStrict": true,
     "strictNullChecks": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    "strictPropertyInitialization": false
+    "noFallthroughCasesInSwitch": false,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": false,
+    "noImplicitAny": true,
+    "strictBindCallApply": false,
+    /* Paths */
+    "baseUrl": "./",
+    "paths": {
+      "@Data/*": [
+        "./src/data/*"
+      ],
+      "@Domain/*": [
+        "./src/domain/*"
+      ],
+      "@Infra/*": [
+        "./src/infra/*"
+      ],
+      "@Main/*": [
+        "./src/main/*"
+      ],
+      "@Presentation/*": [
+        "./src/presentation/*"
+      ],
+      "@Validation/*": [
+        "./src/validation/*"
+      ]
+    }
   },
   "include": [
     "src"
