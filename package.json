@@ -11,7 +11,7 @@
     "prepare": "husky",
     "test": "vitest run",
     "test:watch": "vitest",
-    "test:staged": "vitest related",
+    "test:staged": "vitest run related",
     "test:ci": "npm test -- --coverage"
   },
   "dependencies": {
